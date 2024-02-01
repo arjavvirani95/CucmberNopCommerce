@@ -7,6 +7,6 @@ Feature: Login Data Driven with Excel
 
     Examples: 
       | row_index |
+      |         0 |
       |         1 |
       |         2 |
-      |         3 |
