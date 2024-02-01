@@ -10,3 +10,7 @@ Feature: Login Data Driven with Excel
       |         0 |
       |         1 |
       |         2 |
+      |         3 |
+      |         4 |
+      
+      
