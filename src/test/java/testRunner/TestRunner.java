@@ -7,9 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= {".//FeatureFiles/"}, // all feature file will be executed.
+		//features= {".//FeatureFiles/"}, // all feature file will be executed.
 		//features= {".//FeatureFiles/Login.feature"}, // for particular feature file.
-		//features= {".//FeatureFiles/LoginDDTExcel.feature"}, // same as above.
+		features= {".//FeatureFiles/LoginDDTExcel.feature"}, // same as above.
 		//features= {".//FeatureFiles/Login.feature",".//Features/Registration.feature"},  // suppose you have 3 feature and want to run only 2 of them.
 		//features= {"@target/rerun.txt"}, // this will re run failure feature file.
 		glue="stepDefinitions", // package name of stepdefinitions files.
@@ -20,9 +20,9 @@ import io.cucumber.junit.CucumberOptions;
 
 		dryRun=false,    // checks mapping between scenario steps and step definition methods, true means it will just check every steps has its own method
 		monochrome=true, // to avoid junk characters in output
-		publish=false,  // to publish report in cucumber server
+		publish=true  // to publish report in cucumber server
 		//tags="@sanity" // this will execute scenarios tagged with @sanity
-		tags="@regression"
+		//tags="@regression"
 		//tags="@sanity and @regression" //Scenarios tagged with both @sanity and @regression
 		//tags="@sanity and not @regression" //Scenarios tagged with @sanity but not tagged with @regression
 		//tags="@sanity or @regression" //Scenarios tagged with either @sanity or @regression

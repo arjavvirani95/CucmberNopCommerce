@@ -16,42 +16,38 @@ import io.cucumber.java.Scenario;
 
 public class Hooks {
 
-	 WebDriver driver;
-	 Properties p;
-     
-	@Before
-    public void setup() throws IOException
-    {
-    	driver=BaseClass.initilizeBrowser();
-    	    	
-    	p=BaseClass.getProperties();
-    	driver.get(p.getProperty("appURL"));
-    	driver.manage().window().maximize();
-    
-    			
-	}
-		
-    
-    @After
-    public void tearDown(Scenario scenario) {
-        		
-       driver.quit();
-       
-    }
-    
+	WebDriver driver;
+	Properties p;
 
-    @AfterStep
-    public void addScreenshot(Scenario scenario) {
-        
-    	// this is for cucumber junit report
-        if(scenario.isFailed()) {
-        	
-        	TakesScreenshot ts=(TakesScreenshot) driver;
-        	byte[] screenshot=ts.getScreenshotAs(OutputType.BYTES);
-        	scenario.attach(screenshot, "image/png",scenario.getName());
-        	            
-        }
-      
-    }
-   
+	@Before
+	public void setup() throws IOException
+	{
+		driver=BaseClass.initilizeBrowser();
+
+		p=BaseClass.getProperties();
+		driver.get(p.getProperty("appURL"));
+		driver.manage().window().maximize(); 
+	}
+
+
+	@After
+	public void tearDown(Scenario scenario) {
+		driver.quit();
+	}
+
+
+	@AfterStep
+	public void addScreenshot(Scenario scenario) {
+
+		// this is for cucumber junit report
+		if(scenario.isFailed()) {
+
+			TakesScreenshot ts=(TakesScreenshot) driver;
+			byte[] screenshot=ts.getScreenshotAs(OutputType.BYTES);
+			scenario.attach(screenshot, "image/png",scenario.getName());
+
+		}
+
+	}
+
 }
