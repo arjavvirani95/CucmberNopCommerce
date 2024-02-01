@@ -4,8 +4,8 @@ Feature: Account Registration
   Scenario: Successful Account Registration
     Given the user navigates to Register Account page
     When the user enters the details into below fields
-      | firstName | Kelly       |
-      | lastName  | Simon     |
+      | firstName | Kelly      |
+      | lastName  | Simon      |
       | telephone | 1234567890 |
       | password  | test@123   |
     And the user selects Privacy Policy
