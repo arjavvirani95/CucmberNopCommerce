@@ -8,9 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		//features= {".//FeatureFiles/"}, // all feature file will be executed.
-		features= {".//FeatureFiles/Login.feature"}, // for particular feature file.
+		//features= {".//FeatureFiles/Login.feature"}, // for particular feature file.
 		//features= {".//FeatureFiles/LoginDDTExcel.feature"}, // same as above.
-		//features= {".//FeatureFiles/Login.feature",".//Features/Registration.feature"},  // suppose you have 3 feature and want to run only 2 of them.
+		features= {".//FeatureFiles/Login.feature",".//FeatureFiles/Registration.feature"},  // suppose you have 3 feature and want to run only 2 of them.
 		//features= {"@target/rerun.txt"}, // this will re run failure feature file.
 		glue="stepDefinitions", // package name of stepdefinitions files.
 		plugin= {"pretty", "html:reports/myreport.html",  // for JUnit ByDefault HTML reports.
