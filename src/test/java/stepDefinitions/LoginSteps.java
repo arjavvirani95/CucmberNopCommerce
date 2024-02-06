@@ -21,7 +21,7 @@ public class LoginSteps {
      LoginPage lp;
      MyAccountPage macc;
   
-     List<HashMap<String, String>> datamap; //Data driven
+     List<HashMap<String, String>> datamap; // Return Data driven
      
    
     @Given("the user navigates to login page")
